@@ -1,0 +1,43 @@
+{
+  "name": "deno1",
+  "$schema": "node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "sourceRoot": "src",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/deno:emit",
+      "outputs": [
+        "dist/deno1"
+      ],
+      "options": {
+        "main": "src/main.ts",
+        "outputFile": "dist/deno1/main.js",
+        "denoConfig": "deno.json"
+      }
+    },
+    "serve": {
+      "executor": "@nrwl/deno:run",
+      "options": {
+        "buildTarget": "deno1:build",
+        "watch": true
+      }
+    },
+    "test": {
+      "executor": "@nrwl/deno:test",
+      "outputs": [
+        "coverage/deno1"
+      ],
+      "options": {
+        "coverageDirectory": "coverage/deno1",
+        "denoConfig": "deno.json"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/deno:lint",
+      "options": {
+        "denoConfig": "deno.json"
+      }
+    }
+  },
+  "tags": []
+}

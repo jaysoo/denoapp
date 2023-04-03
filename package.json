@@ -1,0 +1,14 @@
+{
+  "name": "deno1",
+  "version": "0.0.0",
+  "license": "MIT",
+  "scripts": {},
+  "private": true,
+  "dependencies": {
+    "@nrwl/deno": "16.4.3-beta.1"
+  },
+  "devDependencies": {
+    "@nrwl/workspace": "16.4.3-beta.1",
+    "nx": "16.4.3-beta.1"
+  }
+}
